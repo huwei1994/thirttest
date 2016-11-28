@@ -28,5 +28,11 @@
             "type": "vcs",
             "url": "http://git.tzsafe.com/php-packages/left-right-tree-structure.git"
         }
-    ]
+    ],
+	"autoload": {
+        "psr-4": {
+            "Huwei1994\\Test4\\": "src/"
+        }
+    }
+	
 }
