@@ -10,20 +10,8 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {
-        "php-packages/structured-response": "0.0.1",
-        "php-packages/left-right-tree-structure": "0.0.1"
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "http://git.tzsafe.com/php-packages/structured-response.git"
-        },
-        {
-            "type": "vcs",
-            "url": "http://git.tzsafe.com/php-packages/left-right-tree-structure.git"
-        }
-    ],
+    "require": {},
+    
     "autoload": {
         "psr-4": {
             "Huwei1994\\Test4\\": "src/"
