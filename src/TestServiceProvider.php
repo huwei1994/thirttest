@@ -21,11 +21,13 @@ class TestServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/views/scms/admin', 'test4');
         $this->loadViewsFrom(__DIR__.'/views/scms/api', 'test4');
 
+        //视图
         $this->publishes([
             __DIR__.'/views/lrts' => base_path('resources/views/lrts'),
             __DIR__.'/views/scms' => base_path('resources/views/scms'),
             __DIR__.'/config/filesy.php' => config_path('filesy.php'),
         ]);
+        //资源文件
         $this->publishes([
             __DIR__.'/public/assets/bootstrap' => public_path('assets/bootstrap'),
             __DIR__.'/public/assets/css' => public_path('assets/css'),
@@ -34,6 +36,12 @@ class TestServiceProvider extends ServiceProvider
             __DIR__.'/public/assets/scms' => public_path('assets/scms'),
             __DIR__.'/public/assets/web' => public_path('assets/web'),
         ], 'public');
+
+        //控制器和模型
+        $this->publishes([
+            __DIR__.'/Scms' => app_path('Http/Controllers/Scms'),
+            __DIR__.'/Models' => app_path('Models'),
+        ]);
     }
 
     /**
