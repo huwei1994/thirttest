@@ -22,7 +22,7 @@ class TestServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/views/scms' => base_path('resources/views/scms'),
-            __DIR__.'/config/filesystems.php' => config_path('filesystems.php'),
+            __DIR__.'/config' => config_path('filesystems'),
         ]);
         $this->publishes([
             __DIR__.'/public/assets/bootstrap' => public_path('assets/bootstrap'),
