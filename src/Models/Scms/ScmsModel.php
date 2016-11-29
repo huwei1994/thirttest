@@ -1,5 +1,5 @@
 <?php
-namespace Huwei1994\Test4\Src\Models\Scms;
+namespace App\Models\Scms;
 use DB;
 use ScmsContentManagement\ScmsCore;
 use App\Models\Scms\CategoryModel;
@@ -39,10 +39,10 @@ class ScmsModel
         $categoryNameField = $this->category->getNodeNameField();
         $scmsTbl = $this->getTable();
         $res = $db->where('id', $id)
-                  ->leftJoin($categoryTbl, $scmsTbl.'.category_id', '=', $categoryTbl.'.category_id')
-                  ->select($scmsTbl.'.*', $categoryTbl.'.'.$categoryNameField)
-                  ->selectRaw("ifnull({$categoryTbl}.{$categoryNameField}, '无') as {$categoryNameField}")
-                  ->get();
+            ->leftJoin($categoryTbl, $scmsTbl.'.category_id', '=', $categoryTbl.'.category_id')
+            ->select($scmsTbl.'.*', $categoryTbl.'.'.$categoryNameField)
+            ->selectRaw("ifnull({$categoryTbl}.{$categoryNameField}, '无') as {$categoryNameField}")
+            ->get();
         return $res;
     }
 
@@ -134,8 +134,8 @@ class ScmsModel
         $categoryNameField = $this->category->getNodeNameField();
         $scmsTbl = $this->getTable();
         $db->leftJoin($categoryTbl, $scmsTbl.'.category_id', '=', $categoryTbl.'.category_id')
-           ->select($scmsTbl.'.*', $categoryTbl.'.'.$categoryNameField)
-           ->selectRaw("ifnull({$categoryTbl}.{$categoryNameField}, '无') as {$categoryNameField}");
+            ->select($scmsTbl.'.*', $categoryTbl.'.'.$categoryNameField)
+            ->selectRaw("ifnull({$categoryTbl}.{$categoryNameField}, '无') as {$categoryNameField}");
         return $db->orderBy($order_id, $orderBy)->skip($offset)->take($length)->get();
     }
 

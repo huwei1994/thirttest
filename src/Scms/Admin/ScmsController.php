@@ -1,9 +1,9 @@
 <?php
-namespace Huwei1994\Test4\Src\Scms\Admin;
-use Huwei1994\Test4\Src\Models\Scms\CategoryModel;
+namespace App\Http\Controllers\Scms\Admin;
+use App\Models\Scms\CategoryModel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Huwei1994\Test4\Src\Models\Scms\ScmsModel;
+use App\Models\Scms\ScmsModel;
 use Illuminate\Support\Facades\Storage;
 use StructuredResponse\StructuredResponse;
 /**
@@ -107,7 +107,7 @@ class ScmsController extends Controller
         //接收文件
         $file = $request->file('upload_big_image');
         //判断文件是否上传成功
-        if ($file->isValid()) 
+        if ($file->isValid())
         {
             //扩展名
             $ext = $file->getClientOriginalExtension();
@@ -136,7 +136,7 @@ class ScmsController extends Controller
         //接收文件
         $file = $request->file('upload_small_image');
         //判断文件是否上传成功
-        if ($file->isValid()) 
+        if ($file->isValid())
         {
             //扩展名
             $ext = $file->getClientOriginalExtension();

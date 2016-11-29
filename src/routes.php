@@ -12,32 +12,31 @@
 
 // Controllers Within The "App\Http\Controllers\scms" Namespace
 
-Route::group(['namespace' => 'Src', 'prefix' => 'src'], function()
+Route::group(['namespace' => 'Scms', 'prefix' => 'scms'], function()
 {
-    Route::group(['namespace' => 'Scms', 'prefix' => 'scms'], function()
+    Route::group(['namespace' => 'Admin','prefix' => 'admin'],function()
     {
-        Route::group(['namespace' => 'Admin','prefix' => 'admin'],function()
-        {
-            Route::get('scms/list','ScmsController@index');//首页访问入口
-            Route::post('scms/add','ScmsController@addItem');
-            Route::post('scms/del','ScmsController@delItem');
-            Route::post('scms/update','ScmsController@update');
-            Route::post('scms/getdata','ScmsController@getData');
-            Route::post('scms/reset','ScmsController@resetItem');
-            Route::post('scms/uploadbigfile','ScmsController@uploadBigFile');
-            Route::post('scms/uploadsmallfile','ScmsController@uploadSmallFile');
-            //分组相关
-            Route::get('category/list','CategoryController@getList');
-            Route::post('category/add','CategoryController@add');
-            Route::post('category/edit','CategoryController@edit');
-            Route::post('category/delete','CategoryController@delete');
-        });
-        Route::group(['namespace' => 'Api','prefix' => 'api'], function(){
-            Route::post('post/list','PostController@getList');
-            Route::get('post/index','PostController@index');
-        });
+        Route::get('scms/list','ScmsController@index');//首页访问入口
+        Route::post('scms/add','ScmsController@addItem');
+        Route::post('scms/del','ScmsController@delItem');
+        Route::post('scms/update','ScmsController@update');
+        Route::post('scms/getdata','ScmsController@getData');
+        Route::post('scms/reset','ScmsController@resetItem');
+        Route::post('scms/uploadbigfile','ScmsController@uploadBigFile');
+        Route::post('scms/uploadsmallfile','ScmsController@uploadSmallFile');
+        //分组相关
+        Route::get('category/list','CategoryController@getList');
+        Route::post('category/add','CategoryController@add');
+        Route::post('category/edit','CategoryController@edit');
+        Route::post('category/delete','CategoryController@delete');
+    });
+    Route::group(['namespace' => 'Api','prefix' => 'api'], function(){
+        Route::post('post/list','PostController@getList');
+        Route::get('post/index','PostController@index');
     });
 });
+
+
 
 // Controllers Within The "App\Http\Controllers\Lrts" Namespace
 Route::group(['namespace' => 'Lrts', 'prefix' => 'lrts'], function()

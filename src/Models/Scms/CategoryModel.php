@@ -1,5 +1,5 @@
 <?php
-namespace Huwei1994\Test4\Src\Models\Scms;
+namespace App\Models\Scms;
 
 use DB;
 

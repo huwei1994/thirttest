@@ -10,11 +10,28 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
-    
+    "require": {
+        "php-packages/scms-content-management": "0.0.1",
+        "php-packages/structured-response": "0.0.1",
+        "php-packages/left-right-tree-structure": "0.0.1"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "http://git.tzsafe.com/php-packages/scms.git"
+        },
+        {
+            "type": "vcs",
+            "url": "http://git.tzsafe.com/php-packages/structured-response.git"
+        },
+        {
+            "type": "vcs",
+            "url": "http://git.tzsafe.com/php-packages/left-right-tree-structure.git"
+        }
+    ],
     "autoload": {
         "psr-4": {
-            "Huwei1994\\Test4\\": "src/"
+            "Huwei1994\\Test4\\":"src/"
         }
     }
 }

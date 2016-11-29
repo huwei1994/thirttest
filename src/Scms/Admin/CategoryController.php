@@ -1,8 +1,8 @@
 <?php
 
-namespace Huwei1994\Test4\Src\Scms\Admin;
+namespace App\Http\Controllers\Scms\Admin;
 
-use Huwei1994\Test4\Src\Models\Scms\CategoryModel;
+use App\Models\Scms\CategoryModel;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
