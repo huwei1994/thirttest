@@ -17,12 +17,10 @@ class TestServiceProvider extends ServiceProvider
         if (! $this->app->routesAreCached()) {
             require __DIR__.'/routes.php';
         }
-        $this->loadViewsFrom(__DIR__.'/views/lrts/admin', 'test4');
         $this->loadViewsFrom(__DIR__.'/views/scms/admin', 'test4');
         $this->loadViewsFrom(__DIR__.'/views/scms/api', 'test4');
 
         $this->publishes([
-            __DIR__.'/views/lrts' => base_path('resources/views/lrts'),
             __DIR__.'/views/scms' => base_path('resources/views/scms'),
             __DIR__.'/config/filesystems.php' => config_path('filesystems.php'),
         ]);
@@ -34,6 +32,13 @@ class TestServiceProvider extends ServiceProvider
             __DIR__.'/public/assets/scms' => public_path('assets/scms'),
             __DIR__.'/public/assets/web' => public_path('assets/web'),
         ], 'public');
+
+
+        //控制器和模型
+        $this->publishes([
+            __DIR__.'/Scms' => app_path('Http/Controllers/Scms'),
+            __DIR__.'/Models' => app_path('Models'),
+        ]);
     }
 
     /**
@@ -43,7 +48,7 @@ class TestServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        //合并配置文件
 		$this->mergeConfigFrom(
         __DIR__.'/config/filesystems.php', 'filesystems'
     );
