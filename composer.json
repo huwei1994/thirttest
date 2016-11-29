@@ -10,10 +10,18 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "php-packages/scms-content-management":"0.0.2"
+        },
     "autoload": {
         "psr-4": {
             "Huwei1994\\Test4\\":"src/"
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/huwei1994/ScmsCore.git"
+        }
+    ]
 }
