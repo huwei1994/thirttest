@@ -24,7 +24,7 @@ class TestServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/views/lrts' => base_path('resources/views/lrts'),
             __DIR__.'/views/scms' => base_path('resources/views/scms'),
-            __DIR__.'/config/filesy.php' => config_path('filesy.php'),
+            __DIR__.'/config/filesystems.php' => config_path('filesystems.php'),
         ]);
         $this->publishes([
             __DIR__.'/public/assets/bootstrap' => public_path('assets/bootstrap'),
@@ -44,5 +44,8 @@ class TestServiceProvider extends ServiceProvider
     public function register()
     {
         //
+		$this->mergeConfigFrom(
+        __DIR__.'/config/filesystems.php', 'filesystems'
+    );
     }
 }
