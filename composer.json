@@ -10,7 +10,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "huwei1994/scmscore":"0.0.1"
+        "huwei1994/scmscore":"0.0.2"
         },
     "autoload": {
         "psr-4": {
