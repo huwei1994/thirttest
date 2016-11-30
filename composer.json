@@ -1,5 +1,5 @@
 {
-    "name": "huwei1994/test4",
+    "name": "huwei1994/thirttest",
     "description": "this time is true envirment",
     "license": "MIT",
     "authors": [
@@ -14,7 +14,7 @@
         },
     "autoload": {
         "psr-4": {
-            "Huwei1994\\Test4\\":"src/"
+            "Huwei1994\\Thirttest\\":"src/"
         }
     },
     "repositories": [
