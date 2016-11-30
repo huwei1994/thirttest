@@ -10,7 +10,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php-packages/scms-content-management":"0.0.3"
+        "huwei1994/scmscore":"0.0.1"
         },
     "autoload": {
         "psr-4": {
@@ -20,7 +20,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/huwei1994/ScmsCore.git"
+            "url": "https://github.com/huwei1994/scmscore.git"
         }
     ]
 }
