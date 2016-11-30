@@ -11,7 +11,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php-packages/scms-content-management":"0.0.2"
+        "php-packages/scms-content-management":"0.0.3"
         },
     "autoload": {
         "psr-4": {
