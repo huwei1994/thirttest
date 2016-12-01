@@ -10,11 +10,11 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "huwei1994/scmscore":"0.0.2"
+        "huwei1994/scmscore":"0.0.3"
         },
     "autoload": {
         "psr-4": {
-            "Huwei1994\\Thirttest\\":"src/"
+            "Thirttest\\":"src/"
         }
     },
     "repositories": [
